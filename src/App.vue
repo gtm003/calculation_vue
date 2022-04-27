@@ -1,28 +1,38 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <div class="d-flex align-center">
+      <CalculationsPage />
+    </div>
+    <v-btn color="#2fcb5a" elevation="2" x-large>
+      <h2 class="mr-2" color="white">ИТОГО К ОПЛАТЕ</h2>
+      <v-spacer></v-spacer>
+      <h3 class="mr-2">3900 Р</h3>
+    </v-btn>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import CalculationsPage from "./components/CalculationsPage";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    CalculationsPage,
+  },
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+h2, h3 {
+  font-weight: normal;
+  color: white;
+}
+
+h2 {
+  font-weight: 700;
+}
+
+a {
+  color: #42b983;
 }
 </style>
