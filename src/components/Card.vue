@@ -10,17 +10,16 @@
         <v-card-text class="text-block">{{ variant.description }}</v-card-text>
         <v-divider inset vertical></v-divider>
         <v-card-actions class="action-block">
-          <v-checkbox
-            v-model="checkbox"
-            :label="`Checkbox 1: ${checkbox.toString()}`"
-          ></v-checkbox>
+          <div class="container">
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+            <label for="vehicle1"> I have a bike</label>
+          </div>
           <v-btn color="#2fcb5a" elevation="2"> Выбрано </v-btn></v-card-actions
         >
       </div>
     </v-card>
   </v-container>
 </template>
-
 <script>
 export default {
   props: {
@@ -29,17 +28,21 @@ export default {
       reqired: true,
     },
   },
-    data: () => ({
+  data: () => ({
     checkbox: true,
   }),
 };
 </script>
 
 <style scoped>
+.container {
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+}
 .text-block {
   white-space: pre-line;
   font-size: 1rem;
-  width: 600px;
+  width: 500px;
 }
 
 .action-block {

@@ -1,6 +1,6 @@
 <template>
-  <v-container>
-    <v-divider inset></v-divider>
+  <v-container class="container">
+    <hr class="divider" />
     <h3>{{ firstBlock.title }}</h3>
     <Card v-for="variant in firstBlock.variants" :variant="variant" />
   </v-container>
@@ -22,6 +22,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.container {
+  width: 780px;
+  padding: 1rem;
+}
+.divider {
+  border-top: 2px solid #cccccc;
+  margin-bottom: 1rem;
+}
 h1,
 h2 {
   font-weight: normal;
